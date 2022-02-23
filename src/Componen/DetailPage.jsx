@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Table } from "react-bootstrap";
 import "./DetailPage.css";
-import { getTicket } from "../store/action/Ticket";
+import { getTicket } from "../store/action/ticket";
 function DetailPage() {
   const dispatch = useDispatch();
-  const { ticket} = useSelector((state)=>state.reducerTicket.listTicket);
-
+  const { Ticket} = useSelector((state)=>state.reducerTicket.listTicket);
+console.log(Ticket)
   useEffect(() => {
     dispatch(getTicket());
   }, [dispatch]);
